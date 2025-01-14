@@ -15,7 +15,7 @@ app = FastAPI()
 sdk = CopilotKitSDK(
     agents=[
         LangGraphAgent(
-            name="chatbot",
+            name="Plan_Sarthi",
             description="A sample chatbot",
             graph=graph,
         )
