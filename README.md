@@ -21,7 +21,8 @@ Plan-Sarthi functions like a chatbot. When you provide a query, it processes the
 - [![Langgraph](https://img.shields.io/badge/-Langgraph-green)](https://langchain-ai.github.io/langgraph/)
 
 ---
-Agent
+## Agent
+
 ![Screenshot 2025-01-15 110556](https://github.com/user-attachments/assets/b22e6264-5d86-4feb-ac71-84b86b8f0892)
 
 
@@ -39,9 +40,13 @@ git clone https://github.com/Rishikesh63/Plan-Sarthi.git
    ```
 2. Install dependencies:
    ```bash
+   pip install poetry
+   ```   
+3. Install dependencies:
+   ```bash
    poetry install
    ```
-3. Start the Agent server:
+4. Start the Agent server:
    ```bash
    poetry run demo
    ```
