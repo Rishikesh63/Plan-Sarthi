@@ -10,7 +10,7 @@ class AgentState(TypedDict):
     human_approval: bool  
     human_feedback: str  
 
-llm = ChatGroq(model="llama-3.3-70b-versatile")
+llm = ChatGroq(model="llama-3.3-70b-versatile",temperature=0.5, max_tokens=100)
 
 def ai_response(state: AgentState):
     print("Generating AI response...")
