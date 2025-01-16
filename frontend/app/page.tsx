@@ -9,23 +9,14 @@ import { ReviewTool } from "./ReviewTool";
 export default function Home() {
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [reviewContent, setReviewContent] = useState<string[]>([]);
-  const [chatHistory, setChatHistory] = useState<string[]>([]); // Store chat history
 
   // Handler to process agent responses
   const handleAgentResponse = (response: string) => {
-    // Parse response into queries (example logic)
     const bullets = response
       .split("\n")
       .filter((line) => line.trim().startsWith("-"));
     setReviewContent(bullets);
-    setIsReviewMode(true); // Automatically enter review mode
-  };
-
-  // Handler for query clicks
-  const handleQueryClick = (query: string) => {
-    setChatHistory((prev) => [...prev, `User clicked: ${query}`]);
-    // Simulate a re-query to the agent based on the query
-    console.log(`Re-querying for: ${query}`);
+    setIsReviewMode(true);
   };
 
   return (
@@ -64,7 +55,6 @@ export default function Home() {
                 title: "Plan Sarthi",
                 initial: "Hi! 👋 How can I assist you today?",
               }}
-              // Mock response for agent response
               onInProgress={(inProgress) =>
                 !inProgress &&
                 handleAgentResponse("- Travel destination\n- Mock Exam Prep")
@@ -75,7 +65,7 @@ export default function Home() {
           {/* Conditional Rendering of ReviewTool */}
           {isReviewMode && (
             <div className="flex-1 border border-gray-300 rounded-lg p-4">
-              <ReviewTool bullets={reviewContent} onQueryClick={handleQueryClick} />
+              <ReviewTool bullets={reviewContent} onQueryClick={(query) => console.log(query)} />
             </div>
           )}
         </div>
