@@ -20,6 +20,7 @@ langgraph-cli = {extras = ["inmem"], version = "^0.1.64"}
 langchain-groq = "^0.2.2"
 
 
+flask-cors = "^5.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

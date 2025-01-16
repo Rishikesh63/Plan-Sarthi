@@ -1,17 +1,24 @@
-"""Demo"""
-
 import os
 from dotenv import load_dotenv
-load_dotenv() # pylint: disable=wrong-import-position
+load_dotenv()  
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from copilotkit.integrations.fastapi import add_fastapi_endpoint
 from copilotkit import CopilotKitSDK, LangGraphAgent
 from my_agent.agent import graph
 
-
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://plan-sarthi.vercel.app"],  # Vercel frontend domain
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_credentials=True,
+    allow_headers=["*"],
+)
+
 sdk = CopilotKitSDK(
     agents=[
         LangGraphAgent(
@@ -27,4 +34,7 @@ add_fastapi_endpoint(app, sdk, "/copilotkit")
 def main():
     """Run the uvicorn server."""
     port = int(os.getenv("PORT", "8000"))
-    uvicorn.run("my_agent.demo:app", host="0.0.0.0", port=port, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=port, reload=True)
+
+if __name__ == "__main__":
+    main()
