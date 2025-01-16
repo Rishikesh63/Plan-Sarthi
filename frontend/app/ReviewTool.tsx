@@ -1,7 +1,5 @@
 "use client";
 
-import { useCopilotAction } from "@copilotkit/react-core";
-
 export function ReviewTool({
   bullets,
   onQueryClick,
