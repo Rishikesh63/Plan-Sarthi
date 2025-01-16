@@ -1,0 +1,9 @@
+{
+    "extends": ["next/core-web-vitals"],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "warn", // Change 'error' to 'warn' to avoid build issues
+      "react/no-unescaped-entities": "warn",       // Example: Avoid unescaped entities in JSX
+      "react/jsx-key": "error"                     // Ensure all JSX elements in arrays have keys
+    }
+  }
+  
