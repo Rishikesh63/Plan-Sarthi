@@ -11,16 +11,16 @@ load_dotenv()
 
 app = FastAPI()
 
-origins = [
-    "https://plan-sarthi.vercel.app",  # Frontend domain
-    "http://localhost",               # Local development
-    "http://localhost:3000",          # Local frontend development
-    "http://127.0.0.1:3000",          # Localhost alternative
-]
+# origins = [
+#     "https://plan-sarthi.vercel.app",  # Frontend domain
+#     "http://localhost",               # Local development
+#     "http://localhost:3000",          # Local frontend development
+#     "http://127.0.0.1:3000",          # Localhost alternative
+# ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["http://localhost:3000","https://plan-sarthi.vercel.app"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
