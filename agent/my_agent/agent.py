@@ -3,14 +3,18 @@ from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph.message import add_messages
+import os
+from dotenv import load_dotenv
+load_dotenv()  
 
+groq_api_key = os.getenv("GROQ_API_KEY")
 class AgentState(TypedDict):
     """Contains the state of the agent."""
     messages: Annotated[list, add_messages]
     human_approval: bool  
     human_feedback: str  
 
-llm = ChatGroq(model="llama-3.3-70b-versatile",temperature=0.5, max_tokens=100)
+llm = ChatGroq(model="llama-3.3-70b-versatile",temperature=0 ,api_key=groq_api_key)
 
 def ai_response(state: AgentState):
     print("Generating AI response...")
