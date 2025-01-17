@@ -11,11 +11,18 @@ load_dotenv()
 
 app = FastAPI()
 
+origins = [
+    "https://plan-sarthi.vercel.app",  # Frontend domain
+    "http://localhost",               # Local development
+    "http://localhost:3000",          # Local frontend development
+    "http://127.0.0.1:3000",          # Localhost alternative
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://plan-sarthi.vercel.app"],  
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_origins=origins,
     allow_credentials=True,
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
@@ -30,6 +37,10 @@ sdk = CopilotKitSDK(
 )
 
 add_fastapi_endpoint(app, sdk, "/copilotkit")
+
+@app.get("/")
+async def plan():
+    return {"message": "Hello World"}
 
 def main():
     port = int(os.getenv("PORT", "8000"))
