@@ -1,4 +1,4 @@
-# Plan-Sarthi
+# Solve-Sarthi
 ![Screenshot 2025-01-15 112443](https://github.com/user-attachments/assets/fc39d0e8-ee85-4775-9dbc-7dd22461ba8c)
 
 ---
@@ -19,6 +19,14 @@ Plan-Sarthi functions like a chatbot. When you provide a query, it processes the
 - [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 - [![Groq](https://img.shields.io/badge/-Groq-orange)](https://groq.com/)
 - [![Langgraph](https://img.shields.io/badge/-Langgraph-green)](https://langchain-ai.github.io/langgraph/)
+
+---
+## Demo Video: Local Development and How It Works
+
+Watch the demo video to see how to set up and use Solve Sarthi for local development and to understand how it works:  
+[![Solve Sarthi Demo](https://img.youtube.com/vi/YHhGXuErmDA/0.jpg)](https://www.youtube.com/watch?v=YHhGXuErmDA)
+
+Click the image or [here](https://www.youtube.com/watch?v=YHhGXuErmDA) to watch the video.
 
 ---
 ## Agent
