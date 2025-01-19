@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "my_agent/demo.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/copilotkit(.*)",
+        "dest": "my_agent/demo.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "my_agent/demo.py"
+      }
+    ],
+    "env": {
+      "PORT": "8000"
+    }
+  }
+  
