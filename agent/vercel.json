@@ -16,6 +16,7 @@
         "dest": "my_agent/demo.py"
       }
     ],
+    "buildCommand": "poetry install --no-dev",
     "env": {
       "PORT": "8000"
     }
