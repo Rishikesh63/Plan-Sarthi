@@ -4,8 +4,8 @@ from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph.message import add_messages
 import os
-from dotenv import load_dotenv
-load_dotenv()  
+# from dotenv import load_dotenv
+# load_dotenv()  
 
 groq_api_key = os.getenv("GROQ_API_KEY")
 class AgentState(TypedDict):
