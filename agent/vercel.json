@@ -3,7 +3,10 @@
   "builds": [
     {
       "src": "my_agent/demo.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
     }
   ],
   "routes": [
@@ -17,6 +20,6 @@
     }
   ],
   "env": {
-    "PORT": "8000" 
+    "PORT": "8000"
   }
 }
