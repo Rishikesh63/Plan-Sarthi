@@ -1,4 +1,4 @@
-# Solve-Sarthi
+# Solve-Sarthi: Building an AI-Powered Assistant with CoAgent 
 
 
 https://github.com/user-attachments/assets/038f7d51-9574-4690-9686-3d3269692e29
@@ -35,6 +35,9 @@ Watch the demo video to see how to set up and use Solve Sarthi for local develop
 
 Click the image or [here](https://www.youtube.com/watch?v=YHhGXuErmDA) to watch the video.
 
+---
+## Blog Post
+[![Solve Sarthi Blog ](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyjoaa1nmptig4lraqg7d.png)](https://dev.to/rishikesh63/building-solve-sarthi-an-ai-powered-assistant-with-coagent-30ai)
 ---
 ## Agent
 
