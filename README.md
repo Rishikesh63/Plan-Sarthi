@@ -48,11 +48,11 @@ Click the image or [here](https://www.youtube.com/watch?v=YHhGXuErmDA) to watch 
 ## Cloning the Repository
 To get started, clone this repository using the following command:
 ```bash
-git clone https://github.com/Rishikesh63/Plan-Sarthi.git
+git clone https://github.com/Rishikesh63/SOLVE-SARTHI.git
 ```
 
 ## Agent Setup
-1. Navigate to the backend directory:
+1. Navigate to the agent directory:
    ```bash
    cd agent
    ```
